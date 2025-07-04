@@ -11,7 +11,7 @@ db.sqlite3
 *.sqlite3
 
 # Environment variables file
-.env
+#.env
 
 # PyCharm project files
 .idea/
@@ -29,10 +29,10 @@ ENV/
 *.log
 
 # Media files (upload files in Django)
-media/
+#media/
 
 # Static files (Django collects static files)
-static/
+#static/
 
 # Python virtual environment
 venv/
