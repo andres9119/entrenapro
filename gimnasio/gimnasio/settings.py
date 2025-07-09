@@ -1,16 +1,12 @@
 
 import os
 from pathlib import Path
-import environ
-
-# Inicializa el entorno
-env = environ.Env()
-environ.Env.read_env()  # Lee el archivo .env
 
 
 
-SECRET_KEY = env('SECRET_KEY')  # Carga la clave secreta de la variable de entorno
-DEBUG = env.bool('DEBUG', default=False)
+
+SECRET_KEY = 'django-insecure-odfm!g7!bw@%)8rs)$sm--(app$vlv7&rkk6ar4vdfo233$u=^'
+DEBUG = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -18,8 +14,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['entrenaprochapinero.pythonanywhere.com']
 
 # Application definition
 
@@ -64,25 +60,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gimnasio.wsgi.application'
 
 
-# Inicializa el entorno
-env = environ.Env()
-# Lee el archivo .env
-environ.Env.read_env()
 
-# Configura la base de datos usando las variables de entorno
+
+# Configura la base de datos 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST', default='localhost'),
-        'PORT': env('DB_PORT', default='3306'),
+        'NAME': 'entrenaprochapin$default',
+        'USER': 'entrenaprochapin',
+        'PASSWORD': 'andres2121',
+        'HOST': 'entrenaprochapinero.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
     }
 }
+
 
 
 # Password validation
